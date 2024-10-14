@@ -1,5 +1,5 @@
 # Base Gitpod workspace image
-FROM gitpod/workspace-java-17:latest
+FROM gitpod/workspace-base:latest
 
 # Install Java (JDK) for Spring Boot
 USER gitpod
