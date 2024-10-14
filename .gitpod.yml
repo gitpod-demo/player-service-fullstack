@@ -1,3 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
   - name: player-service-backend
     init: |
@@ -5,8 +8,7 @@ tasks:
       mvn package -DskipTests
   - name: player-service-fe
     init: |
-      cd players-ui-react
-      npm install
+      yarn install
   - name: ollama-setup-tinyllma
     before: |
       docker pull ollama/ollama
