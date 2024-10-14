@@ -1,0 +1,19 @@
+# To cusomize this file, please visit https://devportal.intuit.com/app/dp/capability/1337/capabilityDocs/cloud-workspace-docs/docs/cwsAlpha/workspace-customization.md
+image: docker.intuit.com/cloud-workspaces/cloud-workspace-images/service/java:latest-debian
+
+tasks:
+  - name: Java SpringBoot
+    init: sh -x .cws/init.sh
+
+# Add additional repositories as below
+# additionalRepositories:
+#   - url: https://github.intuit.com/sample-org-1/sample-repo-1
+#     checkoutLocation: cws-cli-dir
+#   - url: https://github.intuit.com/sample-org-2/sample-repo-2
+
+# VSCode is installed into your CWS by default. To opt out of JetBrains product, please comment out the follow secion.
+jetbrains:
+  intellij:
+    vmoptions:
+    prebuilds:
+      version: 2024.1.1
