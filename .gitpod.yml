@@ -1,9 +1,8 @@
+image:
+  file: .gitpod.Dockerfile
+
 tasks:
   - name: player-service-backend
-    before: |
-      sdk install java 17.0.3-ms
-      \
-      sdk default java 17.0.3-ms
     init: |
       cd players-backend-java
       mvn package -DskipTests
