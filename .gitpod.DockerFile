@@ -1,5 +1,5 @@
 # Base Gitpod workspace image
-FROM gitpod/workspace-base
+FROM gitpod/workspace-full-vnc
 
 # Install Java (JDK) for Spring Boot
 USER gitpod
